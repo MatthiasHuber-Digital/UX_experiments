@@ -4,3 +4,8 @@ lightgbm
 verstack
 matplotlib
 sklearn
+bqplot
+ipympl
+ipyvolume
+scipy
+voila
