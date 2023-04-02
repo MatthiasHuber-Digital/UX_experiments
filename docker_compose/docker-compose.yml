@@ -1,0 +1,15 @@
+version: '1'
+services:
+  jupyter-app:
+    volumes:
+      - "${SOURCE_DATA}:/code_github/UX_experiments/input_data"
+      - "${JUPYTER_NOTEBOOKS}:/code_github/UX_experiments/03_ux_dev_example_nb2"
+    container_name: jupyter-client
+    networks:
+      - aviation_network
+
+networks:
+  aviation_network:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
